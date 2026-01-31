@@ -1,5 +1,8 @@
 from fastapi import FastAPI
 from omega.api import events
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = FastAPI(
     title="Project Omega",
