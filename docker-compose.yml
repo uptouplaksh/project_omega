@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: omega_postgres
+    environment:
+      POSTGRES_DB: omega
+      POSTGRES_USER: omega
+      POSTGRES_PASSWORD: omega
+    ports:
+      - "5432:5432"
+    volumes:
+      - omega_pgdata:/var/lib/postgresql/data
+
+volumes:
+  omega_pgdata:
